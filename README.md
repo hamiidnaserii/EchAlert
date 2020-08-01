@@ -23,3 +23,6 @@ Attention 1 : position includes the numbers 1, 2, 3 and 4
 
 Attention 2 :The third input of the method can only contain the following values: "RTL","LTR","rtl","ltr"
 
+
+demo : 
+
