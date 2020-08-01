@@ -1,0 +1,380 @@
+<html lang="fa" dir="rtl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="fontiran.com:license" content="Y68A9">
+    <title>EchAlert</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <!-- Custom CSS -->
+    <link href="css/echAlert.css" rel="stylesheet">
+    <script src="js/echAlert.js"></script>
+
+
+    <style>
+
+
+        .RelativeLayout {
+            position: relative;
+        }
+
+        .alignParentTop-center {
+            position: absolute;
+            right: 50%;
+            transform: translate(50%);
+        }
+
+        .alignParentBottom-center {
+            position: absolute;
+            bottom: 0px;
+            right: 50%;
+            transform: translate(50%);
+        }
+
+        .alignParentTop-Left {
+            position: absolute;
+            left: 0;
+        }
+
+        .alignParentTop-Right {
+            position: absolute;
+            right: 0px;
+
+        }
+
+        .alignParentBottom-Right {
+            position: absolute;
+
+            right: 0px;
+            bottom: 0px;
+
+
+        }
+
+        .alignParentBottom-Left {
+            position: absolute;
+
+            left: 0px;
+            bottom: 0px;
+
+        }
+
+        .alignParentRight-center {
+            position: absolute;
+
+            right: 0px;
+            bottom: 50%;
+            transform: translate(0, 50%);
+
+
+        }
+
+        .alignParentLeft-center {
+            position: absolute;
+            left: 0px;
+            bottom: 50%;
+            transform: translate(0, 50%);
+
+
+        }
+
+        .alignParentCenter {
+            position: absolute;
+            right: 50%;
+            bottom: 50%;
+            transform: translate(50%, 50%);
+
+
+        }
+        .h-linearlayout-lt{
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items:flex-start;
+            align-content: center;
+        }
+        .h-linearlayout-lb{
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items:flex-end;
+            align-content: center;
+        }
+        .H-linearlayout-rt{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            align-content: stretch;
+        }
+        .H-linearlayout-rb{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: flex-end;
+            align-content: stretch;
+        }
+        .H-linearlayout-c{
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: flex-end;
+            align-content: stretch;
+        }
+
+        .v-linearlayout-l{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            align-items: flex-end;
+            align-content: stretch;
+
+        }
+
+        .v-linearlayout-c{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            align-items: center;
+            align-content: stretch;
+
+        }
+        .v-linearlayout-r{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            align-items: flex-start;
+            align-content: stretch;
+
+        }
+        .v-linearlayout-s{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            align-items: stretch;
+            align-content: stretch;
+
+        }
+        .weight-fill{
+            flex-grow:1;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="RelativeLayout" style="width:100%;height:100%">
+
+
+    <div class="alignParentCenter">
+
+        <div class="h-linearlayout-lb">
+
+            <div class="v-linearlayout-c" style="border:1px solid #c6c6c6;border-radius:10px;padding: 20px;margin: 10px;width:310px">
+
+                <h3 style="color: #e2bc00">Warning</h3>
+                <p>Alert to display a warning message</p>
+                <input type="text" class="form-control" style="text-align: center" id="myTextW" placeholder="Enter Message">
+                <button type="button" onclick="onshowW()" style="margin-top: 15px;background-color: #e2bc00" class="btn btn-primary btn-lg btn-block">Show Alert</button>
+
+
+            </div>
+            <div class="v-linearlayout-c" style="border:1px solid #c6c6c6;border-radius:10px;padding: 20px;margin: 10px;width:310px">
+
+                <h3 style="color: #1c7430">Successful</h3>
+                <p>Alert to display a successful message</p>
+                <input type="text" class="form-control" style="text-align: center" id="myTextS" placeholder="Enter Message">
+                <button type="button" onclick="onshowS()" style="margin-top: 15px;background-color: #1c7430" class="btn btn-primary btn-lg btn-block">Show Alert</button>
+
+
+            </div>
+            <div class="v-linearlayout-c" style="border:1px solid #c6c6c6;border-radius:10px;padding: 20px;margin: 10px;width:310px">
+
+                <h3 style="color: #ff003d">Error</h3>
+                <p>Alert to display a error message</p>
+                <input type="text" class="form-control" style="text-align: center" id="myTextE" placeholder="Enter Message">
+                <button type="button" onclick="onshowE()" style="margin-top: 15px;background-color: #ff003d" class="btn btn-primary btn-lg btn-block">Show Alert</button>
+
+
+            </div>
+            <div class="v-linearlayout-c" style="border:1px solid #c6c6c6;border-radius:10px;padding: 20px;margin: 10px;width:310px">
+
+                <h3 style="color: #090505">Position</h3>
+                <p>Alert display position</p>
+                <form id="myForm">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                        <label class="form-check-label" for="inlineRadio1">1: Top left</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                        <label class="form-check-label" for="inlineRadio2">2: Top right</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">
+                        <label class="form-check-label" for="inlineRadio3">3: Bottom right</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4">
+                        <label class="form-check-label" for="inlineRadio4">4: Bottom left</label>
+                    </div>
+                </form>
+
+                <br>
+
+                <form id="myForm2">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio5"  value="rtl">
+                        <label class="form-check-label" for="inlineRadio5">RTL</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions1"  id="inlineRadio6" value="ltr">
+                        <label class="form-check-label" for="inlineRadio6">LTR</label>
+                    </div>
+                </form>
+
+
+                <button type="button" onclick="onPosition()" style="margin-top: 15px;background-color: #0078c9" class="btn btn-primary btn-lg btn-block">Set Position</button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+</div>
+
+</body>
+
+<script>
+
+    var p =1;
+    var d ="ltr";
+
+    function getRadioVal(form, name) {
+        var val;
+        // get list of radio buttons with specified name
+        var radios = form.elements[name];
+
+        // loop through list of radio buttons
+        for (var i=0, len=radios.length; i<len; i++) {
+            if ( radios[i].checked ) { // radio checked?
+                val = radios[i].value; // if so, hold its value in val
+                break; // and break out of for loop
+            }
+        }
+        return val; // return value of checked radio or undefined if none checked
+    }
+
+   function onPosition(){
+       var v;
+       $( ".echAlert" ).remove();
+        // v=  document.getElementById("inlineRadio1").value;
+
+
+   }
+   function onshowE(){
+
+     var v=  document.getElementById("myTextE").value;
+       p = getRadioVal( document.getElementById('myForm'), 'inlineRadioOptions' );
+       d = getRadioVal( document.getElementById('myForm2'), 'inlineRadioOptions1' );
+       switch (p) {
+
+           case "1":
+               p=1;
+               break;
+           case "2":
+               p=2;
+               break;
+           case "3":
+               p=3;
+               break;
+           case "4":
+               p=4;
+               break;
+
+       }
+     alaet_error(v,p,d);
+
+   }
+   function onshowS(){
+
+       var v=  document.getElementById("myTextS").value;
+       p = getRadioVal( document.getElementById('myForm'), 'inlineRadioOptions' );
+       d = getRadioVal( document.getElementById('myForm2'), 'inlineRadioOptions1' );
+       switch (p) {
+
+           case "1":
+               p=1;
+               break;
+           case "2":
+               p=2;
+               break;
+           case "3":
+               p=3;
+               break;
+           case "4":
+               p=4;
+               break;
+
+       }
+       alert_success(v,p,d);
+
+   }
+   function onshowW(){
+
+       var v=  document.getElementById("myTextW").value;
+       p = getRadioVal( document.getElementById('myForm'), 'inlineRadioOptions' );
+       d = getRadioVal( document.getElementById('myForm2'), 'inlineRadioOptions1' );
+       switch (p) {
+
+           case "1":
+               p=1;
+               break;
+           case "2":
+               p=2;
+               break;
+           case "3":
+               p=3;
+               break;
+           case "4":
+               p=4;
+               break;
+
+       }
+       alert_warning(v,p,d);
+
+   }
+
+</script>
+
+</html>
